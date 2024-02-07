@@ -1,0 +1,3 @@
+ pi = 3.1415927770 
+[ perf record: Woken up 87 times to write data ]
+[ perf record: Captured and wrote 50.738 MB perf.data (1329448 samples) ]

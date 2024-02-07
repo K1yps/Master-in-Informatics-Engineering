@@ -1,0 +1,36 @@
+---
+- name: (2.a) update system packages
+  apt:
+    update_cache: yes
+    upgrade: no
+
+- name: (2.b) install vim-nox openntpd sudo
+  apt:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ common_packages }}"
+
+- name: (2.c) create a user
+  user:
+    name: "{{ common_username }}"
+    password: "{{ common_password }}"
+    shell: "{{ common_shell }}"
+
+- name: (2.d) add user to sudo group
+  user:
+    name: "{{ common_username }}"
+    groups: "{{ common_member_of }}"
+    append: yes
+
+- name: (2.e) prepare user for public key authentication
+  authorized_key:
+    user: "{{ common_username }}"
+    key: "{{ common_local_public_key }}"
+
+
+- name: (2.f) make sure OpenNTPD and OpenSSH services are enabled and running
+  service:
+    name: "{{ item }}"
+    enabled: yes
+    state: started
+  loop: "{{ common_services }}"  

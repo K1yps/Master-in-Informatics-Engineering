@@ -1,0 +1,8 @@
+[db]
+10.0.0.4
+
+[app]
+10.0.0.5
+
+[all:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'

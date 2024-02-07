@@ -1,0 +1,56 @@
+---
+  - name: Setting up php apt repository
+    ansible.builtin.apt_repository:
+      repo: 'ppa:ondrej/php'
+  
+  - name: Updating apt repo
+    apt:
+      update_cache: yes
+
+  - name: Installing "{{ item }}"
+    apt:
+      name: "{{item}}"      
+    loop: "{{packages}}"
+
+  - name: Installing php "{{ item }}" extension
+    apt:
+      name: php7.4-"{{ item }}"
+    loop: "{{ php_extensions }}"
+
+  - name: Swap checkout
+    ansible.builtin.git:
+      repo: "{{ git_repo }}"
+      dest: "{{ install_dir }}"
+
+  - name: Setting up default envirement
+    ansible.builtin.copy:
+      src: '"{{ swap_home }}"/.env.example'
+      dest: '"{{ swap_home }}/.env' 
+      remote_src: yes
+      follow: yes
+
+  - name: Configuring DB connection
+    ansible.builtin.lineinfile:
+      dest: '"{{ swap_home }}/.env'
+      regexp: "{{ item.regexp }}"
+      line: "{{ item.line }}"
+    loop:
+      - { regexp: '^DB_HOST=.*', line: 'DB_HOST="{{db_host}}"' }
+      - { regexp: '^DB_PORT=.*', line: 'DB_PORT="{{ db_port }}"' }
+      - { regexp: '^DB_DATABASE=.*', line: 'DB_DATABASE="{{ db_name }}"'}
+      - { regexp: '^DB_USERNAME=.*', line: 'DB_USERNAME="{{ db_username }}"'}
+      - { regexp: '^DB_PASSWORD=.*', line: 'DB_PASSWORD="{{ db_password }}"'}
+
+  - name: Setting up "{{item.name}}" dependencies
+    ansible.builtin.shell: "{{ item.command }}"
+    args:
+      chdir: "{{ swap_home }}"
+    loop:
+      - { name: "composer" , command: "composer install"}
+      - { name: "npm" , command: "npm install"}
+      - { name: "artisan key" , command: "php artisan key:generate"}
+
+  - name: Adding server start script to swap directory
+    ansible.builtin.copy:
+      src: 'start.sh'
+      dest: '"{{ swap_home }}' 

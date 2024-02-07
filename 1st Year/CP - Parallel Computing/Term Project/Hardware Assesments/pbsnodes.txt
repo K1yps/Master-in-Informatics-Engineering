@@ -1,0 +1,340 @@
+compute-113-2
+    state = free
+    np = 16
+    properties = rack-113,16CPUs,r113,p2,c8,t16,m8,d250
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=281728000kb:281728000kb,ncpus=16,boards=1,sockets=16,cores=1,threads=1,availmem=7757mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-113-3
+    state = free
+    np = 16
+    properties = rack-113,16CPUs,r113,p2,c8,t16,m8,d250
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=454782976kb:454782976kb,ncpus=16,boards=1,sockets=16,cores=1,threads=1,availmem=7757mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-113-4
+    state = free
+    np = 16
+    properties = rack-113,16CPUs,r113,p2,c8,t16,m8,d250
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=281728000kb:281728000kb,ncpus=16,boards=1,sockets=16,cores=1,threads=1,availmem=7757mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-113-11
+    state = free
+    np = 24
+    properties = rack-113,24CPUs,r113,p2,c12,t24,m48,d120,miry
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=89442304kb:89442304kb,ncpus=24,boards=1,sockets=24,cores=1,threads=1,availmem=48127mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-113-12
+    state = free
+    np = 24
+    properties = rack-113,24CPUs,r113,p2,c12,t24,m48,d120,miry
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=89442304kb:89442304kb,ncpus=24,boards=1,sockets=24,cores=1,threads=1,availmem=48127mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-113-13
+    state = down
+    np = 24
+    properties = rack-113,24CPUs,r113,p2,c12,t24,m48,d120,miry
+    ntype = cluster
+    status = rectime=1642406153,state=down,slurmstate=down*,size=89442304kb:89442304kb,message="Not responding",ncpus=24,boards=1,sockets=24,cores=1,threads=1,availmem=48127mb,opsys=unknown
+    note = Not responding
+
+compute-113-14
+    state = down
+    np = 24
+    properties = rack-113,24CPUs,r113,p2,c12,t24,m48,d120,miry
+    ntype = cluster
+    status = rectime=1642406153,state=down,slurmstate=down*,size=89442304kb:89442304kb,message="Not responding",ncpus=24,boards=1,sockets=24,cores=1,threads=1,availmem=48127mb,opsys=unknown
+    note = Not responding
+
+compute-113-15
+    state = free
+    np = 24
+    properties = rack-113,24CPUs,r113,p2,c12,t24,m48,d120,miry
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=89442304kb:89442304kb,ncpus=24,boards=1,sockets=24,cores=1,threads=1,availmem=48127mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-113-16
+    state = free
+    np = 24
+    properties = rack-113,24CPUs,r113,p2,c12,t24,m48,d120,miry
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=89442304kb:89442304kb,ncpus=24,boards=1,sockets=24,cores=1,threads=1,availmem=48127mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-113-17
+    state = free
+    np = 24
+    properties = rack-113,24CPUs,r113,p2,c12,t24,m12,d120,miry
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=454782976kb:454782976kb,ncpus=24,boards=1,sockets=24,cores=1,threads=1,availmem=11841mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-113-18
+    state = free
+    np = 24
+    properties = rack-113,24CPUs,r113,p2,c12,t24,m12,d120,miry
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=454782976kb:454782976kb,ncpus=24,boards=1,sockets=24,cores=1,threads=1,availmem=11841mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-113-19
+    state = free
+    np = 24
+    properties = rack-113,24CPUs,r113,p2,c12,t24,m12,d120,miry
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=454782976kb:454782976kb,ncpus=24,boards=1,sockets=24,cores=1,threads=1,availmem=11841mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-113-20
+    state = free
+    np = 24
+    properties = rack-113,24CPUs,r113,p2,c12,t24,m12,d120,miry
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=454782976kb:454782976kb,ncpus=24,boards=1,sockets=24,cores=1,threads=1,availmem=11841mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-113-102
+    state = down
+    np = 24
+    properties = rack-113,24CPUs,r113,c12,m48,d80,myri,tesla,m2070
+    ntype = cluster
+    status = rectime=1642406153,state=down,slurmstate=down*,size=0kb:0kb,message="Not responding",ncpus=24,boards=1,sockets=24,cores=1,threads=1,availmem=1mb,opsys=unknown
+    note = Not responding
+
+compute-124-1
+    state = job-exclusive
+    np = 32
+    properties = rack-124,32CPUs,r124,p2,c16,t32,m64,d2600,myri
+    ntype = cluster
+    status = rectime=1642406153,state=job-exclusive,slurmstate=allocated,size=89442304kb:89442304kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64227mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-124-2
+    state = job-exclusive
+    np = 32
+    properties = rack-124,32CPUs,r124,p2,c16,t32,m64,d2600,myri
+    ntype = cluster
+    status = rectime=1642406153,state=job-exclusive,slurmstate=allocated,size=89442304kb:89442304kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64227mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-1
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64227mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-3
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64228mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-4
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64228mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-5
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=89442304kb:89442304kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64228mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-6
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64228mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-7
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64224mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-9
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64228mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-10
+    state = job-exclusive
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=job-exclusive,slurmstate=allocated,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64228mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-12
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64228mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-14
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64228mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-16
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64228mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-17
+    state = job-exclusive
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=job-exclusive,slurmstate=allocated,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64228mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-18
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64228mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-19
+    state = job-exclusive
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=job-exclusive,slurmstate=allocated,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64226mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-20
+    state = free
+    np = 32
+    properties = rack-134,32CPUs,r134,p2,c16,t32,m64,d200,myri
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=32,boards=1,sockets=32,cores=1,threads=1,availmem=64226mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-101
+    state = free
+    np = 40
+    properties = rack-134,40CPUs,r134,p2,c20,t40,m64,d120,myri,kepler,k20
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=89442304kb:89442304kb,ncpus=40,boards=1,sockets=40,cores=1,threads=1,availmem=64226mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-102
+    state = job-exclusive
+    np = 40
+    properties = rack-134,40CPUs,r134,p2,c20,t40,m64,d120,myri,phi,7120
+    ntype = cluster
+    status = rectime=1642406153,state=job-exclusive,slurmstate=allocated,size=204814336kb:204814336kb,ncpus=40,boards=1,sockets=40,cores=1,threads=1,availmem=64226mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-111
+    state = job-exclusive
+    np = 48
+    properties = rack-134,48CPUs,r134,p2,c24,t48,m64,d200,myri,kepler,k20
+    ntype = cluster
+    status = rectime=1642406153,state=job-exclusive,slurmstate=allocated,size=89442304kb:89442304kb,ncpus=48,boards=1,sockets=48,cores=1,threads=1,availmem=64225mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-112
+    state = free
+    np = 48
+    properties = rack-134,48CPUs,r134,p2,c24,t48,m64,d200,myri,kepler,k20
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=89442304kb:89442304kb,ncpus=48,boards=1,sockets=48,cores=1,threads=1,availmem=64225mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-113
+    state = free
+    np = 48
+    properties = rack-134,48CPUs,r134,p2,c20,t40,m64,d120,myri,phi,7120
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=89442304kb:89442304kb,ncpus=48,boards=1,sockets=48,cores=1,threads=1,availmem=64223mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-114
+    state = job-exclusive
+    np = 48
+    properties = rack-134,48CPUs,r134,p2,c20,t40,m64,d120,myri,phi,7120
+    ntype = cluster
+    status = rectime=1642406153,state=job-exclusive,slurmstate=allocated,size=89442304kb:89442304kb,ncpus=48,boards=1,sockets=48,cores=1,threads=1,availmem=64225mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-115
+    state = free
+    np = 48
+    properties = rack-134,48CPUs,r134,p2,c20,t40,m64,d120,myri,phi,7120
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=89442304kb:89442304kb,ncpus=48,boards=1,sockets=48,cores=1,threads=1,availmem=64225mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-134-116
+    state = free
+    np = 48
+    properties = rack-134,48CPUs,r134,p2,c20,t40,m64,d120,myri,phi,7120
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=89442304kb:89442304kb,ncpus=48,boards=1,sockets=48,cores=1,threads=1,availmem=64225mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-144-1
+    state = free
+    np = 56
+    properties = rack-144,56CPUs,r144,p2,c28,t56,m128,d1024
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=983565312kb:983565312kb,ncpus=56,boards=1,sockets=56,cores=1,threads=1,availmem=128653mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-144-2
+    state = free
+    np = 56
+    properties = rack-144,56CPUs,r144,p2,c28,t56,m128,d1024
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=983565312kb:983565312kb,ncpus=56,boards=1,sockets=56,cores=1,threads=1,availmem=128653mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-145-1
+    state = free
+    np = 64
+    properties = rack-145,64CPUs
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=983565312kb:983565312kb,ncpus=64,boards=1,sockets=64,cores=1,threads=1,availmem=257667mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-145-2
+    state = free
+    np = 64
+    properties = rack-145,64CPUs,r145,p2,c32,t64,m256,d1024
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=983565312kb:983565312kb,ncpus=64,boards=1,sockets=64,cores=1,threads=1,availmem=257667mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-156-1
+    state = down
+    np = 256
+    properties = knl
+    ntype = cluster
+    status = rectime=1642406153,state=down,slurmstate=down*,size=0kb:0kb,message="Not responding",ncpus=256,boards=1,sockets=256,cores=1,threads=1,availmem=1mb,opsys=unknown
+    note = Not responding
+
+compute-165-1
+    state = free
+    np = 64
+    properties = rack-165,64CPUs,r165,p2,c32,t64,m96,d1024
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=204814336kb:204814336kb,ncpus=64,boards=1,sockets=64,cores=1,threads=1,availmem=95132mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+
+compute-315-1
+    state = down
+    np = 48
+    properties = rack-315,48CPUs,r315,p2,c48,m64,d240
+    ntype = cluster
+    status = rectime=1642406153,state=down,slurmstate=down*,size=0kb:0kb,message="Not responding",ncpus=48,boards=1,sockets=48,cores=1,threads=1,availmem=1mb,opsys=unknown
+    note = Not responding
+
+compute-881-2
+    state = free
+    np = 128
+    properties = rack-881,128CPUs
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=220197888kb:220197888kb,ncpus=128,boards=1,sockets=128,cores=1,threads=1,availmem=128670mb,opsys=linux 3.10.0-693.5.2.el7.x86_64 #1 smp fri oct 20 20:32:50 utc 2017,arch=x86_64
+
+search7
+    state = free
+    np = 1
+    ntype = cluster
+    status = rectime=1642406153,state=free,slurmstate=idle,size=97920000kb:97920000kb,ncpus=1,boards=1,sockets=1,cores=1,threads=1,availmem=3789mb,opsys=linux 3.10.0-1160.41.1.el7.x86_64 #1 smp tue aug 31 14:52:47 utc 2021,arch=x86_64
+

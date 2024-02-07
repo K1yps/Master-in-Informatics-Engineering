@@ -1,0 +1,44 @@
+---
+  - name: Installing apt dependencies
+    apt:
+      name: "{{ apt_packages }}"
+
+  - name: Installing pip dependencies 
+    pip:
+      name: "{{ pip_packages }}"
+      state: present
+
+  - name: Install mysql-server
+    apt:
+      name: mysql-server
+      state: latest
+
+  - name: Change MySQL bind-address
+    lineinfile: 
+      dest: /etc/mysql/mysql.conf.d/mysqld.cnf
+      regexp: 'bind-address\s*=\s*127\.0\.0\.1\s*'
+      line: 'bind-address   = {{ ansible_host }}'
+      state: present
+      backrefs: yes
+    notify: restart mysql
+
+  #- name: Configure mysql bind adress
+  #  ansible.builtin.lineinfile:
+  #    path: /etc/mysql/mysql.conf.d/mysqld.cnf
+  #    regexp: '^#?\s*(bind-address)\s*=.*'
+  #    line: \g<1>\={{ ansible_host }}
+  #  notify: restart mysql
+
+  - name: Create Swap Database
+    community.mysql.mysql_db:
+      name: "{{ database }}"
+      state: present
+    become: yes
+
+  - name: Create Swap database user
+    community.mysql.mysql_user:
+      name: "{{ username }}"
+      password: "{{ password }}"
+      priv: '"{{ database }}".*:ALL'
+      state: present
+

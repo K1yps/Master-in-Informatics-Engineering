@@ -1,0 +1,46 @@
+http://alloy4fun.inesctec.pt/r7eQHqKSyGXXrNqfn
+
+
+pred Invs {
+  
+  //* --------------------------------- Check 1 ---------------------------------
+
+  //** Diferent hashes must point to different names when on the same Tree  
+  all t: Tree, n : Name | lone t.objects.n
+  
+  //* --------------------------------- Check 2 ---------------------------------
+  
+  //** Hashes are unique to each object
+  hash.~hash in iden
+  
+  //* --------------------------------- Check 3 ---------------------------------
+  
+  //** A tree cannot contain hashes to commit objects
+  all t : Tree | t.objects.Name in Blob.hash + Tree.hash
+  
+  //** A commit's tree hash corresponds to a tree signature 
+  all c : Commit | c.tree in Tree.hash
+  
+  //** A commit parent is another commit
+  all c : Commit | c.parent in Commit.hash
+  
+  
+  //* --------------------------------- Check 4 ---------------------------------
+  	
+  //** A tree cannot be a descendent of itself
+  all t : Tree | t not in t.^(objects.Name.~hash)
+  
+  //** A commit cannot be a descendent of itself
+  all c : Commit | c not in c.^(parent.~hash)
+  
+  //* --------------------------------- Check 5 ---------------------------------
+  
+  //** Equal trees have equal hashes
+  all t0, t1 : Tree | t0.objects = t1.objects implies t0.hash = t1.hash
+  
+  //** Equal commits have equal hashes
+  all c0, c1 : Commit | c0.tree = c1.tree and c0.parent = c1.parent implies c0.hash = c1.hash
+
+}
+
+

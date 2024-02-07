@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: swap
+spec:
+  type: NodePort
+  selector:
+    app: swap
+  ports:
+      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+    - port: 8000 #exported to cluster
+      targetPort: 8000 #used to send requests to the pod
+      # Optional field
+      # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
+      nodePort: 30007 #exported to the "outside"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swap
+  labels:
+    app: swap
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: swap
+  template:
+    metadata:
+      labels:
+        app: swap
+    spec:
+      containers:
+      - name: swap
+        image: ascn21/swap
+        env:
+        - name: DB_HOST
+          value: mysql
+        - name: DB_DATABASE
+          value: swap
+        - name: DB_USERNAME
+          value: swapuser
+        - name: DB_PASSWORD
+          value: "54321"
+        ports:
+        - containerPort: 8000
+          name: swap
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: DoNotSchedule
+      #   labelSelector:
+      #     matchLabels:
+      #       app: swap

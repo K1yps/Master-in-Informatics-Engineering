@@ -1,0 +1,612 @@
+4	:invoke	:cbcast	1
+4	:ok	:cbcast	[]
+2	:invoke	:cbcast	2
+2	:ok	:cbcast	[1]
+2	:invoke	:cbcast	3
+2	:ok	:cbcast	[2]
+0	:invoke	:cbcast	4
+0	:ok	:cbcast	[1 2 3]
+3	:invoke	:cbcast	5
+3	:ok	:cbcast	[1 2 3 4]
+3	:invoke	:cbcast	6
+3	:ok	:cbcast	[5]
+3	:invoke	:cbcast	7
+3	:ok	:cbcast	[6]
+0	:invoke	:cbcast	8
+0	:ok	:cbcast	[4 5 6 7]
+1	:invoke	:cbcast	9
+1	:ok	:cbcast	[1 2 3 4 5 6 7 8]
+0	:invoke	:cbcast	10
+0	:ok	:cbcast	[8 9]
+0	:invoke	:cbcast	11
+2	:invoke	:cbcast	12
+0	:ok	:cbcast	[10]
+2	:ok	:cbcast	[3 4 5 6 7 8 9 10 11]
+0	:invoke	:cbcast	13
+0	:ok	:cbcast	[11 12]
+0	:invoke	:cbcast	14
+0	:ok	:cbcast	[13]
+3	:invoke	:cbcast	15
+3	:ok	:cbcast	[7 8 9 10 11 12 13 14]
+4	:invoke	:cbcast	16
+4	:ok	:cbcast	[1 2 3 4 5 6 7 8 9 10 11 12 13 14 15]
+1	:invoke	:cbcast	17
+1	:ok	:cbcast	[9 10 11 12 13 14 15 16]
+1	:invoke	:cbcast	18
+1	:ok	:cbcast	[17]
+3	:invoke	:cbcast	19
+3	:ok	:cbcast	[15 16 17 18]
+0	:invoke	:cbcast	20
+0	:ok	:cbcast	[14 15 16 17 18 19]
+3	:invoke	:cbcast	21
+3	:ok	:cbcast	[19 20]
+3	:invoke	:cbcast	22
+3	:ok	:cbcast	[21]
+3	:invoke	:cbcast	23
+3	:ok	:cbcast	[22]
+0	:invoke	:cbcast	24
+0	:ok	:cbcast	[20 21 22 23]
+3	:invoke	:cbcast	25
+3	:ok	:cbcast	[23 24]
+0	:invoke	:cbcast	26
+0	:ok	:cbcast	[24 25]
+4	:invoke	:cbcast	27
+4	:ok	:cbcast	[16 17 18 19 20 21 22 23 24 25 26]
+0	:invoke	:cbcast	28
+0	:ok	:cbcast	[26 27]
+1	:invoke	:cbcast	29
+1	:ok	:cbcast	[18 19 20 21 22 23 24 25 26 27 28]
+0	:invoke	:cbcast	30
+0	:ok	:cbcast	[28 29]
+4	:invoke	:cbcast	31
+4	:ok	:cbcast	[27 28 29 30]
+1	:invoke	:cbcast	32
+1	:ok	:cbcast	[29 30 31]
+4	:invoke	:cbcast	33
+4	:ok	:cbcast	[31]
+3	:invoke	:cbcast	34
+3	:ok	:cbcast	[25 26 27 28 29 30 31 32 33]
+1	:invoke	:cbcast	35
+1	:ok	:cbcast	[32 33 34]
+2	:invoke	:cbcast	36
+2	:ok	:cbcast	[12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35]
+0	:invoke	:cbcast	37
+0	:ok	:cbcast	[30 31 32 33 34 35 36]
+0	:invoke	:cbcast	38
+0	:ok	:cbcast	[37]
+0	:invoke	:cbcast	39
+0	:ok	:cbcast	[38]
+4	:invoke	:cbcast	40
+4	:ok	:cbcast	[32 33 34 35 36 37 38 39]
+4	:invoke	:cbcast	41
+4	:ok	:cbcast	[40]
+3	:invoke	:cbcast	42
+3	:ok	:cbcast	[34 35 36 37 38 39 40 41]
+3	:invoke	:cbcast	43
+2	:invoke	:cbcast	44
+3	:ok	:cbcast	[42]
+2	:ok	:cbcast	[36 37 38 39 40 41 42]
+2	:invoke	:cbcast	45
+2	:ok	:cbcast	[43 44]
+2	:invoke	:cbcast	46
+2	:ok	:cbcast	[45]
+0	:invoke	:cbcast	47
+0	:ok	:cbcast	[39 40 41 42 43 44 45 46]
+0	:invoke	:cbcast	48
+0	:ok	:cbcast	[47]
+2	:invoke	:cbcast	49
+2	:ok	:cbcast	[46 47 48]
+0	:invoke	:cbcast	50
+0	:ok	:cbcast	[48 49]
+0	:invoke	:cbcast	51
+0	:ok	:cbcast	[50]
+0	:invoke	:cbcast	52
+0	:ok	:cbcast	[51]
+2	:invoke	:cbcast	53
+2	:ok	:cbcast	[49 50 51 52]
+0	:invoke	:cbcast	54
+0	:ok	:cbcast	[52 53]
+2	:invoke	:cbcast	55
+2	:ok	:cbcast	[53 54]
+0	:invoke	:cbcast	56
+0	:ok	:cbcast	[54 55]
+4	:invoke	:cbcast	57
+4	:ok	:cbcast	[41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56]
+2	:invoke	:cbcast	58
+2	:ok	:cbcast	[55 56 57]
+3	:invoke	:cbcast	59
+3	:ok	:cbcast	[43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58]
+2	:invoke	:cbcast	60
+2	:ok	:cbcast	[58 59]
+4	:invoke	:cbcast	61
+4	:ok	:cbcast	[57 58 59 60]
+3	:invoke	:cbcast	62
+3	:ok	:cbcast	[59 60 61]
+2	:invoke	:cbcast	63
+2	:ok	:cbcast	[60 61 62]
+3	:invoke	:cbcast	64
+3	:ok	:cbcast	[62 63]
+3	:invoke	:cbcast	65
+3	:ok	:cbcast	[64]
+2	:invoke	:cbcast	66
+2	:ok	:cbcast	[63 64 65]
+2	:invoke	:cbcast	67
+2	:ok	:cbcast	[66]
+0	:invoke	:cbcast	68
+0	:ok	:cbcast	[56 57 58 59 60 61 62 63 64 65 66 67]
+3	:invoke	:cbcast	69
+3	:ok	:cbcast	[65 66 67 68]
+0	:invoke	:cbcast	70
+0	:ok	:cbcast	[68 69]
+1	:invoke	:cbcast	71
+1	:ok	:cbcast	[35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70]
+3	:invoke	:cbcast	72
+1	:invoke	:cbcast	73
+3	:ok	:cbcast	[69 70 71]
+1	:ok	:cbcast	[71]
+2	:invoke	:cbcast	74
+2	:ok	:cbcast	[67 68 69 70 71 72 73]
+4	:invoke	:cbcast	75
+4	:ok	:cbcast	[61 62 63 64 65 66 67 68 69 70 71 72 73 74]
+2	:invoke	:cbcast	76
+2	:ok	:cbcast	[74 75]
+0	:invoke	:cbcast	77
+0	:ok	:cbcast	[70 71 72 73 74 75 76]
+4	:invoke	:cbcast	78
+4	:ok	:cbcast	[75 76 77]
+3	:invoke	:cbcast	79
+3	:ok	:cbcast	[72 73 74 75 76 77 78]
+1	:invoke	:cbcast	80
+1	:ok	:cbcast	[72 73 74 75 76 77 78 79]
+0	:invoke	:cbcast	81
+0	:ok	:cbcast	[77 78 79 80]
+1	:invoke	:cbcast	82
+1	:ok	:cbcast	[80 81]
+3	:invoke	:cbcast	83
+3	:ok	:cbcast	[79 80 81 82]
+3	:invoke	:cbcast	84
+3	:ok	:cbcast	[83]
+0	:invoke	:cbcast	85
+0	:ok	:cbcast	[81 82 83 84]
+1	:invoke	:cbcast	86
+1	:ok	:cbcast	[82 83 84 85]
+2	:invoke	:cbcast	87
+2	:ok	:cbcast	[76 77 78 79 80 81 82 83 84 85 86]
+3	:invoke	:cbcast	88
+3	:ok	:cbcast	[84 85 86 87]
+0	:invoke	:cbcast	89
+0	:ok	:cbcast	[85 86 87 88]
+3	:invoke	:cbcast	90
+3	:ok	:cbcast	[88 89]
+3	:invoke	:cbcast	91
+3	:ok	:cbcast	[90]
+3	:invoke	:cbcast	92
+3	:ok	:cbcast	[91]
+1	:invoke	:cbcast	93
+1	:ok	:cbcast	[86 87 88 89 90 91 92]
+0	:invoke	:cbcast	94
+0	:ok	:cbcast	[89 90 91 92 93]
+0	:invoke	:cbcast	95
+0	:ok	:cbcast	[94]
+2	:invoke	:cbcast	96
+2	:ok	:cbcast	[87 88 89 90 91 92 93 94 95]
+1	:invoke	:cbcast	97
+1	:ok	:cbcast	[93 94 95 96]
+0	:invoke	:cbcast	98
+0	:ok	:cbcast	[95 96 97]
+2	:invoke	:cbcast	99
+2	:ok	:cbcast	[96 97 98]
+3	:invoke	:cbcast	100
+3	:ok	:cbcast	[92 93 94 95 96 97 98 99]
+0	:invoke	:cbcast	101
+0	:ok	:cbcast	[98 99 100]
+2	:invoke	:cbcast	102
+2	:ok	:cbcast	[99 100 101]
+1	:invoke	:cbcast	103
+1	:ok	:cbcast	[97 98 99 100 101 102]
+3	:invoke	:cbcast	104
+3	:ok	:cbcast	[100 101 102 103]
+2	:invoke	:cbcast	105
+2	:ok	:cbcast	[102 103 104]
+1	:invoke	:cbcast	106
+1	:ok	:cbcast	[103 104 105]
+1	:invoke	:cbcast	107
+1	:ok	:cbcast	[106]
+2	:invoke	:cbcast	108
+2	:ok	:cbcast	[105 106 107]
+4	:invoke	:cbcast	109
+4	:ok	:cbcast	[78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108]
+4	:invoke	:cbcast	110
+4	:ok	:cbcast	[109]
+4	:invoke	:cbcast	111
+4	:ok	:cbcast	[110]
+3	:invoke	:cbcast	112
+3	:ok	:cbcast	[104 105 106 107 108 109 110 111]
+1	:invoke	:cbcast	113
+1	:ok	:cbcast	[107 108 109 110 111 112]
+2	:invoke	:cbcast	114
+2	:ok	:cbcast	[108 109 110 111 112 113]
+4	:invoke	:cbcast	115
+4	:ok	:cbcast	[111 112 113 114]
+2	:invoke	:cbcast	116
+2	:ok	:cbcast	[114 115]
+4	:invoke	:cbcast	117
+4	:ok	:cbcast	[115 116]
+0	:invoke	:cbcast	118
+0	:ok	:cbcast	[101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117]
+0	:invoke	:cbcast	119
+0	:ok	:cbcast	[118]
+0	:invoke	:cbcast	120
+0	:ok	:cbcast	[119]
+2	:invoke	:cbcast	121
+2	:ok	:cbcast	[116 117 118 119 120]
+3	:invoke	:cbcast	122
+3	:ok	:cbcast	[112 113 114 115 116 117 118 119 120 121]
+1	:invoke	:cbcast	123
+1	:ok	:cbcast	[113 114 115 116 117 118 119 120 121 122]
+1	:invoke	:cbcast	124
+1	:ok	:cbcast	[123]
+4	:invoke	:cbcast	125
+4	:ok	:cbcast	[117 118 119 120 121 122 123 124]
+1	:invoke	:cbcast	126
+1	:ok	:cbcast	[124 125]
+3	:invoke	:cbcast	127
+3	:ok	:cbcast	[122 123 124 125 126]
+4	:invoke	:cbcast	128
+4	:ok	:cbcast	[125 126 127]
+2	:invoke	:cbcast	129
+2	:ok	:cbcast	[121 122 123 124 125 126 127 128]
+3	:invoke	:cbcast	130
+3	:ok	:cbcast	[127 128 129]
+3	:invoke	:cbcast	131
+3	:ok	:cbcast	[130]
+4	:invoke	:cbcast	132
+4	:ok	:cbcast	[128 129 130 131]
+3	:invoke	:cbcast	133
+3	:ok	:cbcast	[131 132]
+1	:invoke	:cbcast	134
+1	:ok	:cbcast	[126 127 128 129 130 131 132 133]
+3	:invoke	:cbcast	135
+3	:ok	:cbcast	[133 134]
+0	:invoke	:cbcast	136
+0	:ok	:cbcast	[120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135]
+0	:invoke	:cbcast	137
+0	:ok	:cbcast	[136]
+2	:invoke	:cbcast	138
+2	:ok	:cbcast	[129 130 131 132 133 134 135 136 137]
+2	:invoke	:cbcast	139
+2	:ok	:cbcast	[138]
+0	:invoke	:cbcast	140
+0	:ok	:cbcast	[137 138 139]
+4	:invoke	:cbcast	141
+4	:ok	:cbcast	[132 133 134 135 136 137 138 139 140]
+1	:invoke	:cbcast	142
+1	:ok	:cbcast	[134 135 136 137 138 139 140 141]
+0	:invoke	:cbcast	143
+0	:ok	:cbcast	[140 141 142]
+2	:invoke	:cbcast	144
+2	:ok	:cbcast	[139 140 141 142 143]
+0	:invoke	:cbcast	145
+0	:ok	:cbcast	[143 144]
+2	:invoke	:cbcast	146
+2	:ok	:cbcast	[144 145]
+0	:invoke	:cbcast	147
+0	:ok	:cbcast	[145 146]
+1	:invoke	:cbcast	148
+1	:ok	:cbcast	[142 143 144 145 146 147]
+0	:invoke	:cbcast	149
+0	:ok	:cbcast	[147 148]
+0	:invoke	:cbcast	150
+0	:ok	:cbcast	[149]
+0	:invoke	:cbcast	151
+0	:ok	:cbcast	[150]
+1	:invoke	:cbcast	152
+1	:ok	:cbcast	[148 149 150 151]
+4	:invoke	:cbcast	153
+4	:ok	:cbcast	[141 142 143 144 145 146 147 148 149 150 151 152]
+2	:invoke	:cbcast	154
+2	:ok	:cbcast	[146 147 148 149 150 151 152 153]
+4	:invoke	:cbcast	155
+4	:ok	:cbcast	[153 154]
+0	:invoke	:cbcast	156
+0	:ok	:cbcast	[151 152 153 154 155]
+0	:invoke	:cbcast	157
+0	:ok	:cbcast	[156]
+3	:invoke	:cbcast	158
+3	:ok	:cbcast	[135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157]
+3	:invoke	:cbcast	159
+3	:ok	:cbcast	[158]
+3	:invoke	:cbcast	160
+3	:ok	:cbcast	[159]
+0	:invoke	:cbcast	161
+0	:ok	:cbcast	[157 158 159 160]
+4	:invoke	:cbcast	162
+4	:ok	:cbcast	[155 156 157 158 159 160 161]
+2	:invoke	:cbcast	163
+2	:ok	:cbcast	[154 155 156 157 158 159 160 161 162]
+0	:invoke	:cbcast	164
+0	:ok	:cbcast	[161 162 163]
+2	:invoke	:cbcast	165
+2	:ok	:cbcast	[163 164]
+4	:invoke	:cbcast	166
+4	:ok	:cbcast	[162 163 164 165]
+1	:invoke	:cbcast	167
+1	:ok	:cbcast	[152 153 154 155 156 157 158 159 160 161 162 163 164 165 166]
+1	:invoke	:cbcast	168
+1	:ok	:cbcast	[167]
+0	:invoke	:cbcast	169
+0	:ok	:cbcast	[164 165 166 167 168]
+0	:invoke	:cbcast	170
+0	:ok	:cbcast	[169]
+2	:invoke	:cbcast	171
+2	:ok	:cbcast	[165 166 167 168 169 170]
+4	:invoke	:cbcast	172
+4	:ok	:cbcast	[166 167 168 169 170 171]
+3	:invoke	:cbcast	173
+3	:ok	:cbcast	[160 161 162 163 164 165 166 167 168 169 170 171 172]
+3	:invoke	:cbcast	174
+3	:ok	:cbcast	[173]
+3	:invoke	:cbcast	175
+3	:ok	:cbcast	[174]
+1	:invoke	:cbcast	176
+1	:ok	:cbcast	[168 169 170 171 172 173 174 175]
+0	:invoke	:cbcast	177
+0	:ok	:cbcast	[170 171 172 173 174 175 176]
+2	:invoke	:cbcast	178
+2	:ok	:cbcast	[171 172 173 174 175 176 177]
+0	:invoke	:cbcast	179
+0	:ok	:cbcast	[177 178]
+1	:invoke	:cbcast	180
+1	:ok	:cbcast	[176 177 178 179]
+3	:invoke	:cbcast	181
+3	:ok	:cbcast	[175 176 177 178 179 180]
+2	:invoke	:cbcast	182
+2	:ok	:cbcast	[178 179 180 181]
+1	:invoke	:cbcast	183
+1	:ok	:cbcast	[180 181 182]
+3	:invoke	:cbcast	184
+3	:ok	:cbcast	[181 182 183]
+4	:invoke	:cbcast	185
+4	:ok	:cbcast	[172 173 174 175 176 177 178 179 180 181 182 183 184]
+4	:invoke	:cbcast	186
+4	:ok	:cbcast	[185]
+4	:invoke	:cbcast	187
+4	:ok	:cbcast	[186]
+2	:invoke	:cbcast	188
+2	:ok	:cbcast	[182 183 184 185 186 187]
+1	:invoke	:cbcast	189
+1	:ok	:cbcast	[183 184 185 186 187 188]
+2	:invoke	:cbcast	190
+2	:ok	:cbcast	[188 189]
+2	:invoke	:cbcast	191
+2	:ok	:cbcast	[190]
+0	:invoke	:cbcast	192
+0	:ok	:cbcast	[179 180 181 182 183 184 185 186 187 188 189 190 191]
+4	:invoke	:cbcast	193
+4	:ok	:cbcast	[187 188 189 190 191 192]
+4	:invoke	:cbcast	194
+4	:ok	:cbcast	[193]
+4	:invoke	:cbcast	195
+4	:ok	:cbcast	[194]
+1	:invoke	:cbcast	196
+1	:ok	:cbcast	[189 190 191 192 193 194 195]
+4	:invoke	:cbcast	197
+4	:ok	:cbcast	[195 196]
+1	:invoke	:cbcast	198
+1	:ok	:cbcast	[196 197]
+4	:invoke	:cbcast	199
+4	:ok	:cbcast	[197 198]
+3	:invoke	:cbcast	200
+3	:ok	:cbcast	[184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199]
+0	:invoke	:cbcast	201
+0	:ok	:cbcast	[192 193 194 195 196 197 198 199 200]
+0	:invoke	:cbcast	202
+1	:invoke	:cbcast	203
+0	:ok	:cbcast	[201]
+1	:ok	:cbcast	[198 199 200 201]
+1	:invoke	:cbcast	204
+1	:ok	:cbcast	[202 203]
+0	:invoke	:cbcast	205
+0	:ok	:cbcast	[202 203 204]
+3	:invoke	:cbcast	206
+3	:ok	:cbcast	[200 201 202 203 204 205]
+2	:invoke	:cbcast	207
+2	:ok	:cbcast	[191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206]
+1	:invoke	:cbcast	208
+1	:ok	:cbcast	[204 205 206 207]
+4	:invoke	:cbcast	209
+4	:ok	:cbcast	[199 200 201 202 203 204 205 206 207 208]
+1	:invoke	:cbcast	210
+1	:ok	:cbcast	[208 209]
+2	:invoke	:cbcast	211
+2	:ok	:cbcast	[207 208 209 210]
+2	:invoke	:cbcast	212
+2	:ok	:cbcast	[211]
+4	:invoke	:cbcast	213
+4	:ok	:cbcast	[209 210 211 212]
+1	:invoke	:cbcast	214
+1	:ok	:cbcast	[210 211 212 213]
+2	:invoke	:cbcast	215
+2	:ok	:cbcast	[212 213 214]
+3	:invoke	:cbcast	216
+3	:ok	:cbcast	[206 207 208 209 210 211 212 213 214 215]
+4	:invoke	:cbcast	217
+4	:ok	:cbcast	[213 214 215 216]
+2	:invoke	:cbcast	218
+2	:ok	:cbcast	[215 216 217]
+3	:invoke	:cbcast	219
+3	:ok	:cbcast	[216 217 218]
+2	:invoke	:cbcast	220
+2	:ok	:cbcast	[218 219]
+3	:invoke	:cbcast	221
+3	:ok	:cbcast	[219 220]
+0	:invoke	:cbcast	222
+0	:ok	:cbcast	[205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221]
+0	:invoke	:cbcast	223
+0	:ok	:cbcast	[222]
+2	:invoke	:cbcast	224
+2	:ok	:cbcast	[220 221 222 223]
+0	:invoke	:cbcast	225
+0	:ok	:cbcast	[223 224]
+3	:invoke	:cbcast	226
+3	:ok	:cbcast	[221 222 223 224 225]
+3	:invoke	:cbcast	227
+3	:ok	:cbcast	[226]
+0	:invoke	:cbcast	228
+0	:ok	:cbcast	[225 226 227]
+4	:invoke	:cbcast	229
+4	:ok	:cbcast	[217 218 219 220 221 222 223 224 225 226 227 228]
+0	:invoke	:cbcast	230
+0	:ok	:cbcast	[228 229]
+4	:invoke	:cbcast	231
+4	:ok	:cbcast	[229 230]
+4	:invoke	:cbcast	232
+4	:ok	:cbcast	[231]
+4	:invoke	:cbcast	233
+4	:ok	:cbcast	[232]
+3	:invoke	:cbcast	234
+3	:ok	:cbcast	[227 228 229 230 231 232 233]
+1	:invoke	:cbcast	235
+1	:ok	:cbcast	[214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234]
+0	:invoke	:cbcast	236
+0	:ok	:cbcast	[230 231 232 233 234 235]
+4	:invoke	:cbcast	237
+4	:ok	:cbcast	[233 234 235 236]
+2	:invoke	:cbcast	238
+2	:ok	:cbcast	[224 225 226 227 228 229 230 231 232 233 234 235 236 237]
+1	:invoke	:cbcast	239
+1	:ok	:cbcast	[235 236 237 238]
+3	:invoke	:cbcast	240
+3	:ok	:cbcast	[234 235 236 237 238 239]
+3	:invoke	:cbcast	241
+3	:ok	:cbcast	[240]
+2	:invoke	:cbcast	242
+2	:ok	:cbcast	[238 239 240 241]
+3	:invoke	:cbcast	243
+3	:ok	:cbcast	[241 242]
+4	:invoke	:cbcast	244
+4	:ok	:cbcast	[237 238 239 240 241 242 243]
+3	:invoke	:cbcast	245
+3	:ok	:cbcast	[243 244]
+0	:invoke	:cbcast	246
+0	:ok	:cbcast	[236 237 238 239 240 241 242 243 244 245]
+4	:invoke	:cbcast	247
+4	:ok	:cbcast	[244 245 246]
+1	:invoke	:cbcast	248
+1	:ok	:cbcast	[239 240 241 242 243 244 245 246 247]
+4	:invoke	:cbcast	249
+4	:ok	:cbcast	[247 248]
+1	:invoke	:cbcast	250
+1	:ok	:cbcast	[248 249]
+0	:invoke	:cbcast	251
+0	:ok	:cbcast	[246 247 248 249 250]
+4	:invoke	:cbcast	252
+4	:ok	:cbcast	[249 250 251]
+2	:invoke	:cbcast	253
+2	:ok	:cbcast	[242 243 244 245 246 247 248 249 250 251 252]
+4	:invoke	:cbcast	254
+4	:ok	:cbcast	[252 253]
+3	:invoke	:cbcast	255
+3	:ok	:cbcast	[245 246 247 248 249 250 251 252 253 254]
+0	:invoke	:cbcast	256
+0	:ok	:cbcast	[251 252 253 254 255]
+0	:invoke	:cbcast	257
+0	:ok	:cbcast	[256]
+1	:invoke	:cbcast	258
+1	:ok	:cbcast	[250 251 252 253 254 255 256 257]
+4	:invoke	:cbcast	259
+4	:ok	:cbcast	[254 255 256 257 258]
+0	:invoke	:cbcast	260
+0	:ok	:cbcast	[257 258 259]
+2	:invoke	:cbcast	261
+2	:ok	:cbcast	[253 254 255 256 257 258 259 260]
+0	:invoke	:cbcast	262
+0	:ok	:cbcast	[260 261]
+4	:invoke	:cbcast	263
+4	:ok	:cbcast	[259 260 261 262]
+2	:invoke	:cbcast	264
+2	:ok	:cbcast	[261 262 263]
+3	:invoke	:cbcast	265
+3	:ok	:cbcast	[255 256 257 258 259 260 261 262 263 264]
+3	:invoke	:cbcast	266
+3	:ok	:cbcast	[265]
+4	:invoke	:cbcast	267
+4	:ok	:cbcast	[263 264 265 266]
+1	:invoke	:cbcast	268
+1	:ok	:cbcast	[258 259 260 261 262 263 264 265 266 267]
+3	:invoke	:cbcast	269
+3	:ok	:cbcast	[266 267 268]
+4	:invoke	:cbcast	270
+4	:ok	:cbcast	[267 268 269]
+2	:invoke	:cbcast	271
+2	:ok	:cbcast	[264 265 266 267 268 269 270]
+1	:invoke	:cbcast	272
+1	:ok	:cbcast	[268 269 270 271]
+0	:invoke	:cbcast	273
+0	:ok	:cbcast	[262 263 264 265 266 267 268 269 270 271 272]
+3	:invoke	:cbcast	274
+3	:ok	:cbcast	[269 270 271 272 273]
+2	:invoke	:cbcast	275
+2	:ok	:cbcast	[271 272 273 274]
+1	:invoke	:cbcast	276
+1	:ok	:cbcast	[272 273 274 275]
+3	:invoke	:cbcast	277
+3	:ok	:cbcast	[274 275 276]
+4	:invoke	:cbcast	278
+4	:ok	:cbcast	[270 271 272 273 274 275 276 277]
+4	:invoke	:cbcast	279
+4	:ok	:cbcast	[278]
+1	:invoke	:cbcast	280
+1	:ok	:cbcast	[276 277 278 279]
+2	:invoke	:cbcast	281
+2	:ok	:cbcast	[275 276 277 278 279 280]
+0	:invoke	:cbcast	282
+3	:invoke	:cbcast	283
+0	:ok	:cbcast	[273 274 275 276 277 278 279 280 281]
+3	:ok	:cbcast	[277 278 279 280 281]
+3	:invoke	:cbcast	284
+3	:ok	:cbcast	[283 282]
+2	:invoke	:cbcast	285
+2	:ok	:cbcast	[281 282 283 284]
+0	:invoke	:cbcast	286
+0	:ok	:cbcast	[282 283 284 285]
+3	:invoke	:cbcast	287
+3	:ok	:cbcast	[284 285 286]
+0	:invoke	:cbcast	288
+0	:ok	:cbcast	[286 287]
+1	:invoke	:cbcast	289
+1	:ok	:cbcast	[280 281 282 283 284 285 286 287 288]
+3	:invoke	:cbcast	290
+3	:ok	:cbcast	[287 288 289]
+3	:invoke	:cbcast	291
+3	:ok	:cbcast	[290]
+4	:invoke	:cbcast	292
+4	:ok	:cbcast	[279 280 281 283 282 284 285 286 287 288 289 290 291]
+2	:invoke	:cbcast	293
+2	:ok	:cbcast	[285 286 287 288 289 290 291 292]
+1	:invoke	:cbcast	294
+1	:ok	:cbcast	[289 290 291 292 293]
+0	:invoke	:cbcast	295
+0	:ok	:cbcast	[288 289 290 291 292 293 294]
+2	:invoke	:cbcast	296
+2	:ok	:cbcast	[293 294 295]
+2	:invoke	:cbcast	297
+2	:ok	:cbcast	[296]
+2	:invoke	:cbcast	298
+2	:ok	:cbcast	[297]
+1	:invoke	:cbcast	299
+1	:ok	:cbcast	[294 295 296 297 298]
+3	:invoke	:cbcast	300
+3	:ok	:cbcast	[291 292 293 294 295 296 297 298 299]
+1	:invoke	:cbcast	301
+1	:ok	:cbcast	[299 300]
+1	:invoke	:cbcast	302
+1	:ok	:cbcast	[301]
+4	:invoke	:cbcast	303
+4	:ok	:cbcast	[292 293 294 295 296 297 298 299 300 301 302]
+3	:invoke	:cbcast	304
+3	:ok	:cbcast	[300 301 302 303]
+0	:invoke	:cbcast	305
+0	:ok	:cbcast	[295 296 297 298 299 300 301 302 303 304]
+1	:invoke	:cbcast	306
+1	:ok	:cbcast	[302 303 304 305]

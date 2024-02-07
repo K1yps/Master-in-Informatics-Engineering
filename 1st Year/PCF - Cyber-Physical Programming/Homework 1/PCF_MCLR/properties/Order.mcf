@@ -1,0 +1,6 @@
+[!st1*.st2]false &&
+[!st1*.st3]false &&
+[!st1*.st4]false && 
+[!st2*.st3]false && 
+[!st2*.st4]false && 
+[!st3*.st4]false

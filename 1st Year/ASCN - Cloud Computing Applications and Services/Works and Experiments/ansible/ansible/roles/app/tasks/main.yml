@@ -1,0 +1,50 @@
+---
+- name: install nodejs prerequisites
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ app_packages }}"
+
+- name: add nodejs apt key
+  become: yes
+  apt_key:
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+    state: present
+
+- name: add nodejs repository
+  become: yes
+  apt_repository:
+    repo: deb https://deb.nodesource.com/node_13.x {{ ansible_lsb.codename }} main
+    state: present
+    update_cache: yes
+
+- name: install nodejs
+  become: yes
+  apt:
+    name: nodejs
+    state: present
+
+- name: Get Wiki tar
+  get_url:
+    url: https://github.com/Requarks/wiki/releases/download/2.5.219/wiki-js.tar.gz
+    dest: ~/wikiTar
+
+- name: Creates directory wiki [~/wiki]
+  file:
+    path: ~/wiki
+    state: directory
+
+- name: Extract wiki-js.tar.gz into ~/wiki
+  unarchive:
+    src: ~/wikiTar
+    dest: ~/wiki
+    remote_src: yes
+
+- name: Create Wiki configuration file
+  template: src=env_example dest=~/wiki/config.yml
+
+- name: Delete content & directory [~/wikiTar]
+  file:
+    state: absent
+    path: ~/wikiTar

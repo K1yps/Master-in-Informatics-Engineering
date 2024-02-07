@@ -1,0 +1,18 @@
+port: 3306 # Unused for now 
+database: swap
+username: swap
+password: secret
+
+dblogin_user: root
+dblogin_password: jonas123
+
+apt_packages:
+  - python3
+  - python3-pip
+
+pip_packages:
+  - pymysql
+
+mysql_root_password: "$6$/h7UeMTKeFD$r2Zh/domJJtE5ISaNVnBy8jRympT7FdaY/mjjxrfbQUU5dwpMRR4KBFzgw72sZaA7WvR7mdnZ.B8NXTryXZsz/"
+
+

@@ -1,0 +1,19 @@
+password: $6$mysecretsalt$ZB9R8AirQYAXhtfhOo2qdJz52FyNI6v3L6Uc3KNRP.arBKIYpcuEyQewT5qBAHoyQFwHkW6Z551Ql.cZ53GeY0
+
+packages:
+  - vim-nox
+  - openntpd
+  - sudo
+
+username: tester
+
+shell: /bin/bash
+
+member_of: 
+  - sudo
+
+local_public_key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+
+services:
+  - sshd
+  - openntpd

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>// Place global declarations here.
+chan pick;
+chan put;
+clock c;
+int total:= 0;
+
+
+// chan pick, drop;
+// clock g_time;
+// int[0,1] L;
+</declaration>
+	<template>
+		<name>Lamping</name>
+		<location id="id0" x="-17" y="-17">
+		</location>
+		<location id="id1" x="51" y="-85">
+			<committed/>
+		</location>
+		<location id="id2" x="51" y="51">
+		</location>
+		<location id="id3" x="119" y="-17">
+		</location>
+		<init ref="id0"/>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id2"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id0"/>
+			<label kind="synchronisation" x="1" y="0">drop?</label>
+			<label kind="assignment" x="-8" y="17">L = 1- L</label>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id2"/>
+			<label kind="synchronisation" x="69" y="0">drop?</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id3"/>
+			<label kind="synchronisation" x="69" y="-68">pick?</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="synchronisation" x="1" y="-68">pick?</label>
+		</transition>
+	</template>
+	<template>
+		<name>Adventurer</name>
+		<parameter>const int perf</parameter>
+		<declaration>clock y;</declaration>
+		<location id="id4" x="-595" y="-255">
+		</location>
+		<location id="id5" x="-391" y="-357">
+		</location>
+		<location id="id6" x="-187" y="-255">
+		</location>
+		<location id="id7" x="-391" y="-153">
+		</location>
+		<init ref="id4"/>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id4"/>
+			<label kind="guard" x="-577" y="-238">y&gt;=perf</label>
+			<label kind="synchronisation" x="-577" y="-221">drop!</label>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id7"/>
+			<label kind="guard" x="-373" y="-238">L==1</label>
+			<label kind="synchronisation" x="-373" y="-221">pick?</label>
+			<label kind="assignment" x="-373" y="-204">y:=0</label>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id6"/>
+			<label kind="guard" x="-373" y="-340">y&gt;=perf</label>
+			<label kind="synchronisation" x="-373" y="-323">drop!</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-577" y="-340">L == 0</label>
+			<label kind="synchronisation" x="-577" y="-323">pick</label>
+			<label kind="assignment" x="-577" y="-306">y:=0</label>
+		</transition>
+	</template>
+	<template>
+		<name>Person</name>
+		<parameter>const int crossTime</parameter>
+		<declaration>clock t;</declaration>
+		<location id="id8" x="-1003" y="-901">
+			<name x="-1013" y="-935">Left</name>
+		</location>
+		<location id="id9" x="-799" y="-901">
+			<label kind="invariant" x="-824" y="-943">t&lt;=crossTime</label>
+		</location>
+		<location id="id10" x="-595" y="-901">
+			<label kind="invariant" x="-637" y="-943">t&lt;=crossTime</label>
+		</location>
+		<location id="id11" x="-425" y="-901">
+			<name x="-435" y="-935">End</name>
+		</location>
+		<init ref="id8"/>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="-942" y="-867">put!</label>
+			<nail x="-850" y="-858"/>
+			<nail x="-858" y="-850"/>
+			<nail x="-952" y="-850"/>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id11"/>
+			<label kind="synchronisation" x="-527" y="-926">put!</label>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id9"/>
+			<label kind="guard" x="-739" y="-841">t&gt;=crossTime</label>
+			<label kind="synchronisation" x="-714" y="-807">cross!</label>
+			<label kind="assignment" x="-714" y="-824">t:=0</label>
+			<nail x="-697" y="-841"/>
+			<nail x="-697" y="-841"/>
+		</transition>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id10"/>
+			<label kind="guard" x="-739" y="-1011">t&gt;=crossTime</label>
+			<label kind="synchronisation" x="-714" y="-977">cross!</label>
+			<label kind="assignment" x="-714" y="-994">t:=0</label>
+			<nail x="-697" y="-952"/>
+			<nail x="-697" y="-952"/>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-918" y="-977">pick?</label>
+			<label kind="assignment" x="-909" y="-943">t:=0</label>
+			<nail x="-943" y="-952"/>
+			<nail x="-901" y="-952"/>
+			<nail x="-858" y="-952"/>
+		</transition>
+	</template>
+	<template>
+		<name x="5" y="5">Lamp</name>
+		<declaration>// Place local declarations here.</declaration>
+		<location id="id12" x="-238" y="-127">
+		</location>
+		<location id="id13" x="-85" y="-119">
+		</location>
+		<location id="id14" x="85" y="-119">
+		</location>
+		<location id="id15" x="297" y="-119">
+		</location>
+		<init ref="id12"/>
+		<transition>
+			<source ref="id15"/>
+			<target ref="id14"/>
+			<label kind="synchronisation" x="135" y="-195">cross?</label>
+			<nail x="144" y="-238"/>
+		</transition>
+		<transition>
+			<source ref="id14"/>
+			<target ref="id15"/>
+			<label kind="synchronisation" x="136" y="-68">cross?</label>
+			<nail x="153" y="-8"/>
+		</transition>
+		<transition>
+			<source ref="id13"/>
+			<target ref="id13"/>
+			<label kind="synchronisation" x="-118" y="-42">cross?</label>
+			<nail x="-136" y="-25"/>
+			<nail x="-136" y="-25"/>
+			<nail x="-42" y="-25"/>
+		</transition>
+		<transition>
+			<source ref="id13"/>
+			<target ref="id12"/>
+			<label kind="synchronisation" x="-161" y="-85">put!</label>
+			<nail x="-153" y="-85"/>
+		</transition>
+		<transition>
+			<source ref="id14"/>
+			<target ref="id13"/>
+			<label kind="synchronisation" x="-17" y="-68">put!</label>
+			<nail x="-17" y="-76"/>
+		</transition>
+		<transition>
+			<source ref="id13"/>
+			<target ref="id14"/>
+			<label kind="synchronisation" x="-41" y="-148">pick!</label>
+			<nail x="-17" y="-187"/>
+		</transition>
+		<transition>
+			<source ref="id12"/>
+			<target ref="id13"/>
+			<label kind="synchronisation" x="-161" y="-178">pick!</label>
+			<nail x="-153" y="-153"/>
+			<nail x="-119" y="-153"/>
+		</transition>
+	</template>
+	<system>const int you_time = 1;
+// ...
+
+
+
+You = Adventurer(you_time);
+//...
+
+system You;</system>
+	<queries>
+		<query>
+			<formula></formula>
+			<comment></comment>
+		</query>
+	</queries>
+</nta>

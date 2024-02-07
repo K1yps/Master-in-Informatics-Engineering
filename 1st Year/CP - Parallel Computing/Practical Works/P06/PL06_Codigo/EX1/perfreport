@@ -1,0 +1,69 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 3
+#
+# Samples: 574K of event 'cycles:uppp'
+# Event count (approx.): 404614928562
+#
+# Overhead       Samples  Command  Shared Object       Symbol                     
+# ........  ............  .......  ..................  ...........................
+#
+    75.93%        435307  a.out    libgomp.so.1.0.0    [.] 0x0000000000018418
+    10.11%         57972  a.out    libgomp.so.1.0.0    [.] 0x0000000000018515
+     5.20%         29820  a.out    libgomp.so.1.0.0    [.] 0x000000000001842a
+     2.76%         15839  a.out    libgomp.so.1.0.0    [.] 0x000000000001842c
+     2.38%         13657  a.out    libgomp.so.1.0.0    [.] GOMP_critical_end
+     1.63%          9334  a.out    libgomp.so.1.0.0    [.] GOMP_critical_start
+     0.88%          5035  a.out    libgomp.so.1.0.0    [.] 0x000000000001841a
+     0.25%          1427  a.out    libgomp.so.1.0.0    [.] 0x00000000000183f9
+     0.24%          1350  a.out    a.out               [.] main._omp_fn.0
+     0.12%           698  a.out    libgomp.so.1.0.0    [.] 0x0000000000018427
+     0.12%          2091  a.out    [unknown]           [k] 0xffffffffb418c4ef
+     0.08%           438  a.out    libgomp.so.1.0.0    [.] 0x000000000001850b
+     0.06%           330  a.out    libgomp.so.1.0.0    [.] 0x000000000001850d
+     0.04%           256  a.out    libgomp.so.1.0.0    [.] 0x0000000000018b1f
+     0.02%           138  a.out    libgomp.so.1.0.0    [.] 0x00000000000183eb
+     0.02%           152  a.out    libgomp.so.1.0.0    [.] 0x0000000000018b21
+     0.02%           123  a.out    libgomp.so.1.0.0    [.] 0x0000000000018508
+     0.02%           112  a.out    libgomp.so.1.0.0    [.] 0x0000000000018c97
+     0.02%           102  a.out    libgomp.so.1.0.0    [.] 0x0000000000018b10
+     0.01%            77  a.out    libgomp.so.1.0.0    [.] 0x0000000000018c99
+     0.01%            62  a.out    libgomp.so.1.0.0    [.] 0x0000000000018407
+     0.01%            54  a.out    libgomp.so.1.0.0    [.] 0x0000000000018400
+     0.01%            53  a.out    libgomp.so.1.0.0    [.] 0x0000000000018c88
+     0.01%            50  a.out    libgomp.so.1.0.0    [.] 0x0000000000018423
+     0.01%            41  a.out    libgomp.so.1.0.0    [.] 0x000000000001851b
+     0.01%            36  a.out    libgomp.so.1.0.0    [.] 0x00000000000183f0
+     0.00%            26  a.out    a.out               [.] GOMP_critical_end@plt
+     0.00%            26  a.out    libgomp.so.1.0.0    [.] 0x0000000000018519
+     0.00%            23  a.out    libgomp.so.1.0.0    [.] 0x000000000001850a
+     0.00%            22  a.out    libgomp.so.1.0.0    [.] 0x0000000000018c8b
+     0.00%            19  a.out    libgomp.so.1.0.0    [.] 0x00000000000183f2
+     0.00%            17  a.out    libgomp.so.1.0.0    [.] 0x0000000000018414
+     0.00%            15  a.out    a.out               [.] GOMP_critical_start@plt
+     0.00%            48  a.out    [unknown]           [k] 0xffffffffb4196098
+     0.00%            18  a.out    libgomp.so.1.0.0    [.] 0x0000000000018b13
+     0.00%            12  a.out    libgomp.so.1.0.0    [.] 0x000000000001851f
+     0.00%            11  a.out    libgomp.so.1.0.0    [.] 0x00000000000183e2
+     0.00%             5  a.out    libgomp.so.1.0.0    [.] 0x00000000000183e1
+     0.00%             4  a.out    libgomp.so.1.0.0    [.] 0x0000000000018b1c
+     0.00%             2  a.out    libgomp.so.1.0.0    [.] 0x0000000000018412
+     0.00%             2  a.out    libgomp.so.1.0.0    [.] 0x00000000000183e0
+     0.00%             1  a.out    libgomp.so.1.0.0    [.] 0x0000000000016411
+     0.00%             1  a.out    libgomp.so.1.0.0    [.] 0x00000000000183e6
+     0.00%             1  a.out    ld-2.17.so          [.] strcmp
+     0.00%             6  a.out    libc-2.17.so        [.] __clone
+     0.00%             2  a.out    libc-2.17.so        [.] _setjmp
+     0.00%             2  a.out    libc-2.17.so        [.] __ctype_init
+     0.00%             2  a.out    libpthread-2.17.so  [.] start_thread
+     0.00%             1  a.out    libgomp.so.1.0.0    [.] 0x00000000000162cc
+     0.00%             1  a.out    libc-2.17.so        [.] __sigsetjmp
+     0.00%             1  a.out    libpthread-2.17.so  [.] _setjmp@plt
+     0.00%             1  a.out    libpthread-2.17.so  [.] __ctype_init@plt
+     0.00%             1  a.out    libgomp.so.1.0.0    [.] 0x0000000000018b31
+
+
+#
+# (Tip: Show current config key-value pairs: perf config --list)
+#

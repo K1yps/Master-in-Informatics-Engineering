@@ -1,0 +1,81 @@
+module TreeShit
+
+use  int.Int
+
+type tree 'a = Empty | Node (tree 'a) 'a (tree 'a)
+
+
+
+
+let rec predicate memt  (t : tree int) (x : int)
+    = match t with
+        | Empty -> false
+        | Node t1 k t2 -> if x = k then true else memt t2 x || memt t1 x
+    end
+
+(*
+Lógica
+
+predicate leq_tree (x : int) (t : tree int) = forall k : int. memt t k -> k <= x
+
+Progama
+
+let rec predicate leq_tree (x : int) (t : tree int) = match t with
+    | Empty -> true
+    | Node t1 k t2 -> k <= x && leq_tree x t1 && leq_tree x t2
+*)
+
+(* Dual *)
+let rec predicate leq_tree (x : int) (t : tree int)
+    ensures { result <-> forall k : int. not (memt t k) \/ k <= x }
+    = match t with
+        | Empty -> true
+        | Node t1 k t2 -> k <= x && leq_tree x t1 && leq_tree x t2
+    end
+
+let rec predicate geq_tree (x : int) (t : tree int)
+    ensures { result <-> forall k : int. not (memt t k) \/ k >= x }
+    = match t with
+        | Empty -> true
+        | Node t1 k t2 -> k >= x && geq_tree x t1 && geq_tree x t2
+    end
+
+let rec function num_occ (x : int) (t : tree int) : int
+    = match t with
+        | Empty -> 0
+        | Node t1 k t2 -> if k = x then  1 + (num_occ x t2) + (num_occ x t1) else (num_occ x t2) + (num_occ x t1)
+    end
+
+let rec function size (t: tree 'a) : int =
+    match t with
+      | Empty -> 0
+      | Node t1 _ t2 -> 1 + size(t1) + size (t2)
+    end
+
+
+let rec predicate sortedBT (t : tree int)
+    = match t with
+        | Empty -> true
+        | Node t1 x t2 -> geq_tree x t1 && leq_tree x t2 && sortedBT t1 && sortedBT t2 
+    end
+
+(*
+inductive sortedBT (t : tree int) = 
+    | Sorted_Empty : sortedBT Empty
+    | Sorted_Node : forall x :int , t1 t2 : tree int. geq_tree x t1 /\ leq_tree x t2 /\ sortedBT t1 /\ sortedBT t2 -> sortedBT (Node t1 x t2)
+*)
+
+
+let rec add (t : tree int) (v : int) : tree int =
+    requires { sortedBT t }
+    ensures { sortedBT result }
+    ensures { size result = size t + 1 }
+    ensures { forall x : int. memt result x <-> (memt t x \/ x = v) }
+    ensures { forall x : int. num_occ x result = if x = v then 1 + num_occ x t else num_occ x t }
+    variant { t }
+    match t with
+        | Empty -> Node (Empty) v (Empty)
+        | Node t1 x t2 -> if v <= x then Node (add t1 v) x t2 else Node t1 x (add t2 v)
+    end
+
+end

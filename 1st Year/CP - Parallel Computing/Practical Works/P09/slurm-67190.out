@@ -1,0 +1,31 @@
+
+Sequential CPU execution: 330 microseconds
+
+==20005== NVPROF is profiling process 20005, command: ./bin/stencil
+==20005== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+
+Basic profiling: 0 ms have elapsed for the kernel execution
+
+Cuda error: kernel invocation, an illegal memory access was encountered
+==20005== Profiling application: ./bin/stencil
+==20005== Warning: 1 records have invalid timestamps due to insufficient device buffer space. You can configure the buffer space using the option --device-buffer-size.
+==20005== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:  100.00%  23.264us         1  23.264us  23.264us  23.264us  [CUDA memcpy HtoD]
+      API calls:   77.55%  544.93ms         1  544.93ms  544.93ms  544.93ms  cudaEventSynchronize
+                   22.34%  156.96ms         2  78.478ms  4.9730us  156.95ms  cudaMalloc
+                    0.05%  321.05us         1  321.05us  321.05us  321.05us  cuDeviceTotalMem
+                    0.02%  174.47us       101  1.7270us     160ns  69.389us  cuDeviceGetAttribute
+                    0.01%  96.584us         1  96.584us  96.584us  96.584us  cudaLaunchKernel
+                    0.01%  95.765us         1  95.765us  95.765us  95.765us  cudaMemcpy
+                    0.00%  20.563us         1  20.563us  20.563us  20.563us  cuDeviceGetName
+                    0.00%  15.701us         2  7.8500us  4.8370us  10.864us  cudaEventRecord
+                    0.00%  13.399us         2  6.6990us     920ns  12.479us  cudaEventCreate
+                    0.00%  10.347us         1  10.347us  10.347us  10.347us  cuDeviceGetPCIBusId
+                    0.00%  7.3680us         1  7.3680us  7.3680us  7.3680us  cudaEventElapsedTime
+                    0.00%  3.4900us         3  1.1630us     301ns  2.7370us  cudaGetLastError
+                    0.00%  3.3520us         1  3.3520us  3.3520us  3.3520us  cudaGetErrorString
+                    0.00%  1.8020us         3     600ns     228ns  1.1260us  cuDeviceGetCount
+                    0.00%  1.0180us         2     509ns     238ns     780ns  cuDeviceGet
+                    0.00%     632ns         1     632ns     632ns     632ns  cuDeviceGetUuid
+======== Error: Application returned non-zero code 255

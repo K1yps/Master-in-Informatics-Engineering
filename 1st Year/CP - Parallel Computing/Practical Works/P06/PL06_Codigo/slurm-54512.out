@@ -1,0 +1,16 @@
+done!
+Total of 100000 elements!
+
+Setting up PAPI...done!
+This system has 11 available counters.
+
+Initializing Vector...done!
+
+Wall clock time: 0.010739 secs
+
+Wall clock time run 2: 3.469643 secs
+PAPI_TOT_CYC = 30685556
+PAPI_TOT_INS = 29017683
+CPI = 1.06
+Vector is sort...Valid result.
+That's all, folks

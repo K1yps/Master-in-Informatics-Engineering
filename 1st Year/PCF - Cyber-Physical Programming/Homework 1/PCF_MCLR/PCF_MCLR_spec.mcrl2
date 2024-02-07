@@ -1,0 +1,19 @@
+act
+  st1, st2, st3, st4, _st1, _st2, _st3, _st4, st1_, st2_, st3_, st4_,
+  end1, end2, end3, end1_, end2_, end3_, _end1, _end2, _end3,
+  a1,a2,a3,a4, b1,b2,b3,b4;
+
+proc
+  I = st1_;
+  P1 = _st1 . st2_ . a1 . b1         . end1_ . P1;
+  P2 = _st2 . st3_ . a2 . b2 . _end1 . end2_ . P2;
+  P3 = _st3 . st4_ . a3 . b3 . _end2 . end3_ . P3;
+  P4 = _st4        . a4 . b4 . _end3 . st1_  . P4;
+
+init
+  allow(
+    {st1, st2, st3, st4, end1, end2, end3, a1, a2, a3, a4, b1, b2, b3, b4},
+    comm(
+      { _st1|st1_ -> st1, _st2|st2_ -> st2,_st3|st3_ -> st3,_st4|st4_ -> st4, _end1|end1_ -> end1, _end2|end2_ -> end2, _end3|end3_ -> end3},
+      I || P1 || P2 || P3 || P4
+  ) ) ;

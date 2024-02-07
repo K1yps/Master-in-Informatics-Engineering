@@ -1,0 +1,18 @@
+Square matrices have 32 rows for a total of 1024 elements!
+
+Setting up PAPI...done!
+This system has 11 available counters.
+
+Initializing Matrix A...done!
+Initializing Matrix B...done!
+Initializing Matrix C...done!
+Warming up caches...done!
+
+Wall clock time: 202 usecs
+PAPI_TOT_CYC = 103694
+PAPI_TOT_INS = 239156
+PAPI_L1_DCM = 225
+PAPI_L2_DCM = 71
+CPI = 0.43
+
+That's all, folks

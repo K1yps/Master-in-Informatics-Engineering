@@ -1,0 +1,35 @@
+---
+    - name: (2.a) update system packages
+      apt:
+        update_cache: yes
+        upgrade: no
+
+    - name: (2.b) install vim-nox openntpd sudo
+      apt:
+        name: "{{ item }}"
+        state: latest
+      loop: "{{ packages }}"
+
+    - name: (2.c) create a user called tester with password 123456
+      user:
+        name: "{{ username }}"
+        password: "{{ password }}"
+        shell: "{{ shell }}"
+
+    - name: (2.d) add tester to sudo group
+      user:
+        name: "{{ username }}"
+        groups: "{{ member_of }}"
+        append: yes
+
+    - name: (2.e) prepare tester for public key authentication
+      authorized_key:
+        user: "{{ username }}"
+        key: "{{ local_public_key }}"
+
+    - name: (2.f) make sure OpenNTPD and OpenSSH services are enabled and running
+      service:
+        name: "{{ item }}"
+        enabled: yes
+        state: started
+      loop: "{{ services }}"

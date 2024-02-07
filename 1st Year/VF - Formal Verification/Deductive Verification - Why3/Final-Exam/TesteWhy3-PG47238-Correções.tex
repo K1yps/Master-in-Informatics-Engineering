@@ -1,0 +1,197 @@
+\documentclass[12pt]{article}
+\usepackage[portuguese]{babel}
+\usepackage{natbib}
+\usepackage{url}
+\renewcommand{\baselinestretch}{1.15} 
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{array}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{multirow}
+\usepackage{amsfonts} 
+\usepackage{titlesec}
+    \usepackage{minted}
+
+\title{\vspace{-4em} Auto-Revisão do Teste}
+\author{ Henrique Gabriel dos Santos Neto - PG47238 }
+\date{8 de abril de 2022}
+
+\makeatletter
+\AtBeginEnvironment{minted}{\dontdofcolorbox}
+\def\dontdofcolorbox{\renewcommand\fcolorbox[4][]{##4}}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\section*{Exercício 1}
+
+O exercício contem dois erros que afectam somente a sintaxe do que está escrito, que são resultantes de eu ter a escrito a implementação com a nomenclatura do pseudo-código. Para ambas as variáveis usei os nomes do pseudo-código ($a$ e $b$) em vez do nomes dos argumentos da função ($u$ e $v$). Estou a fazer a chamada recursiva com o nome da função do pseudo-código $gcd$ em vez do nome com que a função está a ser declarada $euclid$. Esta é também por esta razão que na pós-condição a função $gcd$ importada do modulo $Gcd$ é especificada como $"Gcd.gcd"$. Tirando as trocas entre $a-u$ e $b-v$, a pré-condição, a pós-condição e o variante estão correctos e para tal o \textit{why3} conseguiu prová-los.
+
+O ficheiro do exercício para o \textit{why3} já com as correcções da sintaxe é:
+
+\begin{minted}[
+frame=lines,
+framesep=1.5mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]{ocaml}
+module EuclideanAlgorithm
+
+    use import int.Int
+    use import int.EuclideanDivision
+    use import ref.Refint
+    use import number.Gcd
+
+    let rec euclid (u v : int) : int
+        requires {u > 0 /\ v > 0 } 
+        ensures  {result = gcd u v}
+        variant  {u + v}
+    = if u = v then u else (
+         if u > v then euclid (u-v) v else euclid u (v-u)
+         )
+end
+\end{minted}
+
+
+\section*{Exercício 2}
+
+Como agora posso consultar o conteúdo da $stdlib$, posso confirmar que existe de facto existe a função $num\_occ$ para as listas no modulo $list.NumOcc$, por isso não era necessário defini-la no teste. As funções das aulas que foram usadas do $BTree$ e que originaram nas aulas estão presentes no anexo \ref{bter}. Na resolução do teste existiam erros ao importar os modules, por exemplo o module para o predicado $sorted$ é $SortedInt$ e não $Sorted$, a defenição de $++$ está no modulo $Append$ e não é contida no modulo base $List$, etc... 
+\begin{minted}[
+frame=lines,
+framesep=1.5mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]{ocaml}
+module Exercicio2
+
+    use int.Int
+    use list.List
+    use list.NumOcc
+    use list.SortedInt
+    use list.Append
+
+    type tree 'a = Empty | Node (tree 'a) 'a (tree 'a)
+    
+    (* ... Anexo A ... *)
+    
+    let rec function tree_to_list (t:tree int) : list int
+        requires {sortedBT t}
+        ensures  {sorted result}
+        ensures  {forall x : int. num_occ x t = NumOcc.num_occ x result}
+        variant  { t }
+    = match t with
+        | Empty -> Nil
+        | Node t1 x t2 -> (tree_to_list t1) ++ (Cons x (tree_to_list t2))
+      end
+
+end
+\end{minted}
+
+\section*{Exercicio 4}
+
+Ao contrário do que eu escrevi no teste não é necessário especificar o variante de ciclo para este caso.
+Adicionalmente, nos invariantes referi-me aos valores de $i$ como $!i$ , porém isto não é correto, e estes são antes acedidos normalmente com $i$.
+
+Por fim para provar as especificações é necessário especificar um invariante de ciclo muito semelhante à ultima pós-condição que não foi especificado durante o teste. Este indica que para qualquer inteiro $x$, o nº de ocorrências de x no intervalo de $0$ a $i$ é menor ou igual ao nº de ocorrências de $r$ no intervalo de $0$ a $i$, ou seja \mintinline{ocaml}{forall x : int. (numof a x 0 i)  <= (numof a r 0 i)}
+
+Com isto o $why3$ consegue então provar a especificação, sendo esta descrita por:
+
+
+\begin{minted}[
+frame=lines,
+framesep=1.5mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]{ocaml}
+module Exercicio4 
+
+    use int.Int
+    use ref.Refint
+    use array.Array
+    use array.NumOfEq
+    use array.IntArraySorted
+
+    let most_frequent (a : array int) : int
+        requires {length a > 0} (* senão r pode ser invalido no inicio*)
+        requires {sorted a}             
+        ensures  { (old a) = a}
+        ensures  { forall x : int. 
+                    (numof a x 0 (length a))  <= (numof a result 0 (length a)) }
+    = let ref r = a[0] in 
+      let ref c = 1 in
+      let ref m = 1 in 
+      for i = 1 to length a - 1 do
+        invariant {m = numof a r 0 i}
+        invariant {c = numof a (a[i-1]) 0 i}
+        invariant {forall x : int. (numof a x 0 i)  <= (numof a r 0 i)}
+        if a[i] = a[i-1] then begin
+            incr c;
+            if c > m then begin m <- c ; r <- a[i] end
+        end else
+            c <- 1
+        done;
+        r
+
+end
+\end{minted}
+
+
+
+
+\newpage
+\appendix
+
+\section{Funções e predicados sobre $BTrees$}\label{bter}
+\begin{minted}[
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]{ocaml}
+
+    let rec predicate memt  (t : tree int) (x : int)
+        = match t with
+            | Empty -> false
+            | Node t1 k t2 -> if x = k then true else memt t2 x || memt t1 x
+        end
+
+    let rec predicate leq_tree (x : int) (t : tree int)
+        ensures { result <-> forall k : int. not (memt t k) \/ k <= x }
+        = match t with
+            | Empty -> true
+            | Node t1 k t2 -> k <= x && leq_tree x t1 && leq_tree x t2
+        end
+
+    let rec predicate geq_tree (x : int) (t : tree int)
+        ensures { result <-> forall k : int. not (memt t k) \/ k >= x }
+        = match t with
+            | Empty -> true
+            | Node t1 k t2 -> k >= x && geq_tree x t1 && geq_tree x t2
+        end
+
+    let rec function num_occ (x : int) (t : tree int) : int
+        = match t with
+            | Empty -> 0
+            | Node t1 k t2 -> if k = x then  1 + (num_occ x t2) + (num_occ x t1) 
+                                else (num_occ x t2) + (num_occ x t1)
+        end
+
+    inductive sortedBT (t : tree int) = 
+        | Sorted_Empty : sortedBT Empty
+        | Sorted_Node : forall x :int , t1 t2 : tree int. geq_tree x t1 /\ 
+                                        leq_tree x t2 /\ sortedBT t1 /\
+                                        sortedBT t2 -> sortedBT (Node t1 x t2)
+
+
+\end{minted}
+\end{document}

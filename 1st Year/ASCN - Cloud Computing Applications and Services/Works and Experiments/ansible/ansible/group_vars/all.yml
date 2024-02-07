@@ -1,0 +1,9 @@
+# Shared Swap database settings
+app_db_name: wiki 
+app_db_user: gp22
+#this could be in vault...
+app_db_password: 123456
+# bind ip for DB - Using Inventory file content
+app_db_ip: "{{ groups['db'][0] }}"
+# client ip - Using Inventory file content
+app_user_ip: "{{ groups['app'][0] }}"

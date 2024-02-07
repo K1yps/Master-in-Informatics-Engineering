@@ -1,0 +1,8 @@
+<root>
+ <spec>PCF_MCLR_spec.mcrl2</spec>
+ <properties>
+  <property>Order</property>
+  <property>P1 synchronizes</property>
+  <property>All b</property>
+ </properties>
+</root>

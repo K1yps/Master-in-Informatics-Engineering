@@ -1,0 +1,61 @@
+module Exercicio2
+
+    use int.Int
+    use list.List
+    use list.NumOcc
+    use list.SortedInt
+    use list.Append
+    use list.Mem
+
+    type tree 'a = Empty | Node (tree 'a) 'a (tree 'a)
+
+
+    let rec predicate memt  (t : tree int) (x : int)
+        variant {t}
+        = match t with
+            | Empty -> false
+            | Node t1 k t2 -> if x = k then true else memt t2 x || memt t1 x
+        end
+
+    let rec predicate leq_tree (x : int) (t : tree int)
+        ensures { result <-> forall k : int. not (memt t k) \/ k <= x }
+        variant {t}
+        = match t with
+            | Empty -> true
+            | Node t1 k t2 -> k <= x && leq_tree x t1 && leq_tree x t2
+        end
+
+    let rec predicate geq_tree (x : int) (t : tree int)
+        ensures { result <-> forall k : int. not (memt t k) \/ k >= x }
+        variant {t}
+        = match t with
+            | Empty -> true
+            | Node t1 k t2 -> k >= x && geq_tree x t1 && geq_tree x t2
+        end
+
+    let rec function num_occ (x : int) (t : tree int) : int
+        ensures { result > 0 <-> memt t x }
+        ensures {result >= 0 }
+        variant {t}
+        = match t with
+            | Empty -> 0
+            | Node t1 k t2 -> if k = x then  1 + (num_occ x t2) + (num_occ x t1) else (num_occ x t2) + (num_occ x t1)
+        end
+
+
+    inductive sortedBT (t : tree int) = 
+        | Sorted_Empty : sortedBT Empty
+        | Sorted_Node : forall x :int , t1 t2 : tree int. leq_tree x t1 /\ geq_tree x t2 /\ sortedBT t1 /\ sortedBT t2 -> sortedBT (Node t1 x t2)
+
+
+    let rec function tree_to_list (t:tree int) : list int
+        requires {sortedBT t}
+        ensures  {sorted result}
+        ensures  {forall x : int. num_occ x t = NumOcc.num_occ x result}
+        variant  { t }
+    = match t with
+        | Empty -> Nil
+        | Node t1 x t2 -> (tree_to_list t1) ++ (Cons x (tree_to_list t2))
+      end
+    
+end
